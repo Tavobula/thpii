@@ -1,5 +1,5 @@
 # thpii
-Taller de herramientas y Problemas en Ingeniería Industrial
+## Taller de herramientas y Problemas en Ingeniería Industrial
 
 ## Descripción del curso
 Este curso tiene como finalidad un primer acercamiento a los problemas de ingeniería industrial y presentar e instruir a los estudiantes en algunas herramientas para computador enfocado al soporte a la toma de decisiones en el análisis y solución de estos problemas.
