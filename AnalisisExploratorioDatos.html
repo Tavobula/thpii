@@ -1,0 +1,1434 @@
+<style type="text/css">
+    /*!
+*
+* Twitter Bootstrap
+*
+*//*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+*
+* Font Awesome
+*
+*//*!
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+ *
+* IPython base
+*
+*/.modal.fade .modal-dialog{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);-o-transform:translate(0,0);transform:translate(0,0)}code{color:#000}pre{font-size:inherit;line-height:inherit}label{font-weight:400}.border-box-sizing{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.corner-all{border-radius:2px}.no-padding{padding:0}.hbox{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}.hbox>*{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:none}.vbox{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}.vbox>*{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:none}.hbox.reverse,.reverse,.vbox.reverse{-webkit-box-direction:reverse;-moz-box-direction:reverse;box-direction:reverse;flex-direction:row-reverse}.box-flex0,.hbox.box-flex0,.vbox.box-flex0{-webkit-box-flex:0;-moz-box-flex:0;box-flex:0;flex:none;width:auto}.box-flex1,.hbox.box-flex1,.vbox.box-flex1{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}.box-flex,.hbox.box-flex,.vbox.box-flex{-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}.box-flex2,.hbox.box-flex2,.vbox.box-flex2{-webkit-box-flex:2;-moz-box-flex:2;box-flex:2;flex:2}.box-group1{-webkit-box-flex-group:1;-moz-box-flex-group:1;box-flex-group:1}.box-group2{-webkit-box-flex-group:2;-moz-box-flex-group:2;box-flex-group:2}.hbox.start,.start,.vbox.start{-webkit-box-pack:start;-moz-box-pack:start;box-pack:start;justify-content:flex-start}.end,.hbox.end,.vbox.end{-webkit-box-pack:end;-moz-box-pack:end;box-pack:end;justify-content:flex-end}.center,.hbox.center,.vbox.center{-webkit-box-pack:center;-moz-box-pack:center;box-pack:center;justify-content:center}.baseline,.hbox.baseline,.vbox.baseline{-webkit-box-pack:baseline;-moz-box-pack:baseline;box-pack:baseline;justify-content:baseline}.hbox.stretch,.stretch,.vbox.stretch{-webkit-box-pack:stretch;-moz-box-pack:stretch;box-pack:stretch;justify-content:stretch}.align-start,.hbox.align-start,.vbox.align-start{-webkit-box-align:start;-moz-box-align:start;box-align:start;align-items:flex-start}.align-end,.hbox.align-end,.vbox.align-end{-webkit-box-align:end;-moz-box-align:end;box-align:end;align-items:flex-end}.align-center,.hbox.align-center,.vbox.align-center{-webkit-box-align:center;-moz-box-align:center;box-align:center;align-items:center}.align-baseline,.hbox.align-baseline,.vbox.align-baseline{-webkit-box-align:baseline;-moz-box-align:baseline;box-align:baseline;align-items:baseline}.align-stretch,.hbox.align-stretch,.vbox.align-stretch{-webkit-box-align:stretch;-moz-box-align:stretch;box-align:stretch;align-items:stretch}div.error{margin:2em;text-align:center}div.error>h1{font-size:500%;line-height:normal}div.error>p{font-size:200%;line-height:normal}div.traceback-wrapper{text-align:left;max-width:800px;margin:auto}body{position:absolute;left:0;right:0;top:0;bottom:0;overflow:visible}#header{display:none;background-color:#fff;position:relative;z-index:100}#header #header-container{padding-bottom:5px;padding-top:5px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}#header .header-bar{width:100%;height:1px;background:#e7e7e7;margin-bottom:-1px}#header-spacer{width:100%;visibility:hidden}@media print{#header{display:none!important}#header-spacer{display:none}}#ipython_notebook{padding-left:0;padding-top:1px;padding-bottom:1px}@media (max-width:991px){#ipython_notebook{margin-left:10px}}#noscript{width:auto;padding-top:16px;padding-bottom:16px;text-align:center;font-size:22px;color:red;font-weight:700}#ipython_notebook img{height:28px}#site{width:100%;display:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;overflow:auto}@media print{#site{height:auto!important}}.ui-button .ui-button-text{padding:.2em .8em;font-size:77%}input.ui-button{padding:.3em .9em}span#login_widget{float:right}#logout,span#login_widget>.button{color:#333;background-color:#fff;border-color:#ccc}#logout.active,#logout.focus,#logout:active,#logout:focus,#logout:hover,.open>.dropdown-toggle#logout,.open>.dropdown-togglespan#login_widget>.button,span#login_widget>.button.active,span#login_widget>.button.focus,span#login_widget>.button:active,span#login_widget>.button:focus,span#login_widget>.button:hover{color:#333;background-color:#e6e6e6;border-color:#adadad}#logout.active,#logout:active,.open>.dropdown-toggle#logout,.open>.dropdown-togglespan#login_widget>.button,span#login_widget>.button.active,span#login_widget>.button:active{background-image:none}#logout.disabled,#logout.disabled.active,#logout.disabled.focus,#logout.disabled:active,#logout.disabled:focus,#logout.disabled:hover,#logout[disabled],#logout[disabled].active,#logout[disabled].focus,#logout[disabled]:active,#logout[disabled]:focus,#logout[disabled]:hover,fieldset[disabled] #logout,fieldset[disabled] #logout.active,fieldset[disabled] #logout.focus,fieldset[disabled] #logout:active,fieldset[disabled] #logout:focus,fieldset[disabled] #logout:hover,fieldset[disabled] span#login_widget>.button,fieldset[disabled] span#login_widget>.button.active,fieldset[disabled] span#login_widget>.button.focus,fieldset[disabled] span#login_widget>.button:active,fieldset[disabled] span#login_widget>.button:focus,fieldset[disabled] span#login_widget>.button:hover,span#login_widget>.button.disabled,span#login_widget>.button.disabled.active,span#login_widget>.button.disabled.focus,span#login_widget>.button.disabled:active,span#login_widget>.button.disabled:focus,span#login_widget>.button.disabled:hover,span#login_widget>.button[disabled],span#login_widget>.button[disabled].active,span#login_widget>.button[disabled].focus,span#login_widget>.button[disabled]:active,span#login_widget>.button[disabled]:focus,span#login_widget>.button[disabled]:hover{background-color:#fff;border-color:#ccc}#logout .badge,span#login_widget>.button .badge{color:#fff;background-color:#333}.nav-header{text-transform:none}#header>span{margin-top:10px}.modal_stretch .modal-dialog{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;min-height:80vh}.modal_stretch .modal-dialog .modal-body{max-height:calc(100vh - 200px);overflow:auto;flex:1}@media (min-width:768px){.modal .modal-dialog{width:700px}select.form-control{margin-left:12px;margin-right:12px}}/*!
+*
+* IPython auth
+*
+*/.center-nav{display:inline-block;margin-bottom:-4px}/*!
+*
+* IPython tree view
+*
+*/.alternate_upload{background-color:none;display:inline}.alternate_upload.form{padding:0;margin:0}.alternate_upload input.fileinput{text-align:center;vertical-align:middle;display:inline;opacity:0;z-index:2;width:12ex;margin-right:-12ex}.alternate_upload .btn-upload{height:22px}ul#tabs{margin-bottom:4px}ul#tabs a{padding-top:6px;padding-bottom:4px}ul.breadcrumb a:focus,ul.breadcrumb a:hover{text-decoration:none}ul.breadcrumb i.icon-home{font-size:16px;margin-right:4px}ul.breadcrumb span{color:#5e5e5e}.list_toolbar{padding:4px 0;vertical-align:middle}.list_toolbar .tree-buttons{padding-top:1px}.dynamic-buttons{padding-top:3px;display:inline-block}.list_toolbar [class*=span]{min-height:24px}.list_header{font-weight:700;background-color:#eee}.list_placeholder{font-weight:700;padding:4px 7px}.list_container{margin-top:4px;margin-bottom:20px;border:1px solid #ddd;border-radius:2px}.list_container>div{border-bottom:1px solid #ddd}.list_container>div:hover .list-item{background-color:red}.list_container>div:last-child{border:none}.list_item:hover .list_item{background-color:#ddd}.list_item a{text-decoration:none}.list_item:hover{background-color:#fafafa}.action_col{text-align:right}.list_header>div,.list_item>div{line-height:22px;padding:4px 7px}.list_header>div input,.list_item>div input{margin-right:7px;margin-left:14px;vertical-align:baseline;line-height:22px;position:relative;top:-1px}.list_header>div .item_link,.list_item>div .item_link{margin-left:-1px;vertical-align:baseline;line-height:22px}.new-file input[type=checkbox]{visibility:hidden}.item_name{line-height:22px;height:24px}.item_icon{font-size:14px;color:#5e5e5e;margin-right:7px;margin-left:7px;line-height:22px;vertical-align:baseline}.item_buttons{line-height:1em;margin-left:-5px}.item_buttons .btn-group,.item_buttons .input-group{float:left}.item_buttons>.btn,.item_buttons>.btn-group,.item_buttons>.input-group{margin-left:5px}.item_buttons .btn{min-width:13ex}.item_buttons .running-indicator{padding-top:4px;color:#5cb85c}.toolbar_info{height:24px;line-height:24px}input.engine_num_input,input.nbname_input{padding-top:3px;padding-bottom:3px;height:22px;line-height:14px;margin:0}input.engine_num_input{width:60px}.highlight_text{color:#00f}#project_name{display:inline-block;padding-left:7px;margin-left:-2px}#project_name>.breadcrumb{padding:0;margin-bottom:0;background-color:transparent;font-weight:700}#tree-selector{padding-right:0}#button-select-all{min-width:50px}#select-all{margin-left:7px;margin-right:2px}.menu_icon{margin-right:2px}.tab-content .row{margin-left:0;margin-right:0}.folder_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f114"}.folder_icon:before.pull-left{margin-right:.3em}.folder_icon:before.pull-right{margin-left:.3em}.notebook_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f02d";position:relative;top:-1px}.notebook_icon:before.pull-left{margin-right:.3em}.notebook_icon:before.pull-right{margin-left:.3em}.running_notebook_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f02d";position:relative;top:-1px;color:#5cb85c}.running_notebook_icon:before.pull-left{margin-right:.3em}.running_notebook_icon:before.pull-right{margin-left:.3em}.file_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f016";position:relative;top:-2px}.file_icon:before.pull-left{margin-right:.3em}.file_icon:before.pull-right{margin-left:.3em}#notebook_toolbar .pull-right{padding-top:0;margin-right:-1px}ul#new-menu{left:auto;right:0}.kernel-menu-icon{padding-right:12px;width:24px;content:"\f096"}.kernel-menu-icon:before{content:"\f096"}.kernel-menu-icon-current:before{content:"\f00c"}#tab_content{padding-top:20px}#running .panel-group .panel{margin-top:3px;margin-bottom:1em}#running .panel-group .panel .panel-heading{background-color:#eee;line-height:22px;padding:4px 7px}#running .panel-group .panel .panel-heading a:focus,#running .panel-group .panel .panel-heading a:hover{text-decoration:none}#running .panel-group .panel .panel-body{padding:0}#running .panel-group .panel .panel-body .list_container{margin-top:0;margin-bottom:0;border:0;border-radius:0}#running .panel-group .panel .panel-body .list_container .list_item{border-bottom:1px solid #ddd}#running .panel-group .panel .panel-body .list_container .list_item:last-child{border-bottom:0}.delete-button,.duplicate-button,.rename-button,.shutdown-button{display:none}.dynamic-instructions{display:inline-block;padding-top:4px}/*!
+*
+* IPython text editor webapp
+*
+*/.selected-keymap i.fa{padding:0 5px}.selected-keymap i.fa:before{content:"\f00c"}#mode-menu{overflow:auto;max-height:20em}.edit_app #header{-webkit-box-shadow:0 0 12px 1px rgba(87,87,87,.2);box-shadow:0 0 12px 1px rgba(87,87,87,.2)}.edit_app #menubar .navbar{margin-bottom:-1px}.dirty-indicator{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:20px}.dirty-indicator.pull-left{margin-right:.3em}.dirty-indicator.pull-right{margin-left:.3em}.dirty-indicator-dirty{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:20px}.dirty-indicator-dirty.pull-left{margin-right:.3em}.dirty-indicator-dirty.pull-right{margin-left:.3em}.dirty-indicator-clean{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;width:20px}.dirty-indicator-clean.pull-left{margin-right:.3em}.dirty-indicator-clean.pull-right{margin-left:.3em}.dirty-indicator-clean:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f00c"}.dirty-indicator-clean:before.pull-left{margin-right:.3em}.dirty-indicator-clean:before.pull-right{margin-left:.3em}#filename{font-size:16pt;display:table;padding:0 5px}#current-mode{padding-left:5px;padding-right:5px}#texteditor-backdrop{padding-top:20px;padding-bottom:20px}@media not print{#texteditor-backdrop{background-color:#eee}}@media print{#texteditor-backdrop #texteditor-container .CodeMirror-gutter,#texteditor-backdrop #texteditor-container .CodeMirror-gutters{background-color:#fff}}@media not print{#texteditor-backdrop #texteditor-container .CodeMirror-gutter,#texteditor-backdrop #texteditor-container .CodeMirror-gutters{background-color:#fff}#texteditor-backdrop #texteditor-container{padding:0;background-color:#fff;-webkit-box-shadow:0 0 12px 1px rgba(87,87,87,.2);box-shadow:0 0 12px 1px rgba(87,87,87,.2)}}/*!
+*
+* IPython notebook
+*
+*/.ansibold{font-weight:700}.ansiblack{color:#000}.ansired{color:#8b0000}.ansigreen{color:#006400}.ansiyellow{color:#c4a000}.ansiblue{color:#00008b}.ansipurple{color:#9400d3}.ansicyan{color:#4682b4}.ansigray{color:gray}.ansibgblack{background-color:#000}.ansibgred{background-color:red}.ansibggreen{background-color:green}.ansibgyellow{background-color:#ff0}.ansibgblue{background-color:#00f}.ansibgpurple{background-color:#ff00ff}.ansibgcyan{background-color:#0ff}.ansibggray{background-color:gray}div.cell{border:1px solid transparent;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;border-radius:2px;box-sizing:border-box;-moz-box-sizing:border-box;border-width:thin;border-style:solid;width:100%;padding:5px;margin:0;outline:0}div.cell.selected{border-color:#ababab}@media print{div.cell.selected{border-color:transparent}}.edit_mode div.cell.selected{border-color:green}.prompt{min-width:14ex;padding:.4em;margin:0;font-family:monospace;text-align:right;line-height:1.21429em}div.inner_cell{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}@-moz-document url-prefix(){div.inner_cell{overflow-x:hidden}}div.input_area{border:1px solid #cfcfcf;border-radius:2px;background:#f7f7f7;line-height:1.21429em}div.prompt:empty{padding-top:0;padding-bottom:0}div.unrecognized_cell{padding:5px 5px 5px 0;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.unrecognized_cell .inner_cell{border-radius:2px;padding:5px;font-weight:700;color:red;border:1px solid #cfcfcf;background:#eaeaea}div.unrecognized_cell .inner_cell a,div.unrecognized_cell .inner_cell a:hover{color:inherit;text-decoration:none}@media (max-width:540px){.prompt{text-align:left}div.unrecognized_cell>div.prompt{display:none}}div.code_cell{}div.input{page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.input{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.input_prompt{color:navy;border-top:1px solid transparent}div.input_area>div.highlight{margin:.4em;border:none;padding:0;background-color:transparent}div.input_area>div.highlight>pre{margin:0;border:none;padding:0;background-color:transparent}.CodeMirror{line-height:1.21429em;font-size:14px;height:auto;background:0 0}.CodeMirror-scroll{overflow-y:hidden;overflow-x:auto}.CodeMirror-lines{padding:.4em}.CodeMirror-linenumber{padding:0 8px 0 4px}.CodeMirror-gutters{border-bottom-left-radius:2px;border-top-left-radius:2px}.CodeMirror pre{padding:0;border:0;border-radius:0}.highlight-base,.highlight-variable{color:#000}.highlight-variable-2{color:#1a1a1a}.highlight-variable-3{color:#333}.highlight-string{color:#BA2121}.highlight-comment{color:#408080;font-style:italic}.highlight-number{color:#080}.highlight-atom{color:#88F}.highlight-keyword{color:green;font-weight:700}.highlight-builtin{color:green}.highlight-error{color:red}.highlight-operator{color:#A2F;font-weight:700}.highlight-meta{color:#A2F}.highlight-def{color:#00f}.highlight-string-2{color:#f50}.highlight-qualifier{color:#555}.highlight-bracket{color:#997}.highlight-tag{color:#170}.highlight-attribute{color:#00c}.highlight-header{color:#00f}.highlight-quote{color:#090}.highlight-link{color:#00c}.cm-s-ipython span.cm-keyword{color:green;font-weight:700}.cm-s-ipython span.cm-atom{color:#88F}.cm-s-ipython span.cm-number{color:#080}.cm-s-ipython span.cm-def{color:#00f}.cm-s-ipython span.cm-variable{color:#000}.cm-s-ipython span.cm-operator{color:#A2F;font-weight:700}.cm-s-ipython span.cm-variable-2{color:#1a1a1a}.cm-s-ipython span.cm-variable-3{color:#333}.cm-s-ipython span.cm-comment{color:#408080;font-style:italic}.cm-s-ipython span.cm-string{color:#BA2121}.cm-s-ipython span.cm-string-2{color:#f50}.cm-s-ipython span.cm-meta{color:#A2F}.cm-s-ipython span.cm-qualifier{color:#555}.cm-s-ipython span.cm-builtin{color:green}.cm-s-ipython span.cm-bracket{color:#997}.cm-s-ipython span.cm-tag{color:#170}.cm-s-ipython span.cm-attribute{color:#00c}.cm-s-ipython span.cm-header{color:#00f}.cm-s-ipython span.cm-quote{color:#090}.cm-s-ipython span.cm-link{color:#00c}.cm-s-ipython span.cm-error{color:red}.cm-s-ipython span.cm-tab{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=')right no-repeat}div.output_wrapper{display:-webkit-box;-webkit-box-align:stretch;display:-moz-box;-moz-box-align:stretch;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch;z-index:1}div.output_scroll{height:24em;width:100%;overflow:auto;border-radius:2px;-webkit-box-shadow:inset 0 2px 8px rgba(0,0,0,.8);box-shadow:inset 0 2px 8px rgba(0,0,0,.8);display:block}div.output_collapsed{margin:0;padding:0;display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}div.out_prompt_overlay{height:100%;padding:0 .4em;position:absolute;border-radius:2px}div.out_prompt_overlay:hover{-webkit-box-shadow:inset 0 0 1px #000;box-shadow:inset 0 0 1px #000;background:rgba(240,240,240,.5)}div.output_prompt{color:#8b0000}div.output_area{padding:0;page-break-inside:avoid;display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}div.output_area .MathJax_Display{text-align:left!important}div.output_area .rendered_html img,div.output_area .rendered_html table{margin-left:0;margin-right:0}div.output_area img,div.output_area svg{max-width:100%;height:auto}div.output_area img.unconfined,div.output_area svg.unconfined{max-width:none}.output{display:-webkit-box;-webkit-box-orient:vertical;display:-moz-box;-moz-box-orient:vertical;display:box;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}@media (max-width:540px){div.output_area{-webkit-box-orient:vertical;-moz-box-orient:vertical;box-orient:vertical;box-align:stretch;display:flex;flex-direction:column;align-items:stretch}}div.output_area pre{margin:0;padding:0;border:0;vertical-align:baseline;color:#000;background-color:transparent;border-radius:0}div.output_subarea{overflow-x:auto;padding:.4em;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1;max-width:calc(100% - 14ex)}div.output_text{text-align:left;color:#000;line-height:1.21429em}div.output_stderr{background:#fdd}div.output_latex{text-align:left}div.output_javascript:empty{padding:0}.js-error{color:#8b0000}div.raw_input_container{font-family:monospace;padding-top:5px}span.raw_input_prompt{}input.raw_input{font-family:inherit;font-size:inherit;color:inherit;width:auto;vertical-align:baseline;padding:0 .25em;margin:0 .25em}input.raw_input:focus{box-shadow:none}p.p-space{margin-bottom:10px}div.output_unrecognized{padding:5px;font-weight:700;color:red}div.output_unrecognized a,div.output_unrecognized a:hover{color:inherit;text-decoration:none}.rendered_html{color:#000}.rendered_html em{font-style:italic}.rendered_html strong{font-weight:700}.rendered_html :link,.rendered_html :visited,.rendered_html u{text-decoration:underline}.rendered_html h1{font-size:185.7%;margin:1.08em 0 0;font-weight:700;line-height:1}.rendered_html h2{font-size:157.1%;margin:1.27em 0 0;font-weight:700;line-height:1}.rendered_html h3{font-size:128.6%;margin:1.55em 0 0;font-weight:700;line-height:1}.rendered_html h4{font-size:100%;margin:2em 0 0;font-weight:700;line-height:1}.rendered_html h5,.rendered_html h6{font-size:100%;margin:2em 0 0;font-weight:700;line-height:1;font-style:italic}.rendered_html h1:first-child{margin-top:.538em}.rendered_html h2:first-child{margin-top:.636em}.rendered_html h3:first-child{margin-top:.777em}.rendered_html h4:first-child,.rendered_html h5:first-child,.rendered_html h6:first-child{margin-top:1em}.rendered_html ul{list-style:disc;margin:0 2em;padding-left:0}.rendered_html ul ul{list-style:square;margin:0 2em}.rendered_html ul ul ul{list-style:circle;margin:0 2em}.rendered_html ol{list-style:decimal;margin:0 2em;padding-left:0}.rendered_html ol ol{list-style:upper-alpha;margin:0 2em}.rendered_html ol ol ol{list-style:lower-alpha;margin:0 2em}.rendered_html ol ol ol ol{list-style:lower-roman;margin:0 2em}.rendered_html ol ol ol ol ol{list-style:decimal;margin:0 2em}.rendered_html *+ol,.rendered_html *+ul{margin-top:1em}.rendered_html hr{color:#000;background-color:#000}.rendered_html pre{margin:1em 2em}.rendered_html code,.rendered_html pre{border:0;background-color:#fff;color:#000;font-size:100%;padding:0}.rendered_html blockquote{margin:1em 2em}.rendered_html table{margin-left:auto;margin-right:auto;border:1px solid #000;border-collapse:collapse}.rendered_html td,.rendered_html th,.rendered_html tr{border:1px solid #000;border-collapse:collapse;margin:1em 2em}.rendered_html td,.rendered_html th{text-align:left;vertical-align:middle;padding:4px}.rendered_html th{font-weight:700}.rendered_html *+table{margin-top:1em}.rendered_html p{text-align:left}.rendered_html *+p{margin-top:1em}.rendered_html img{display:block;margin-left:auto;margin-right:auto}.rendered_html *+img{margin-top:1em}.rendered_html img,.rendered_html svg{max-width:100%;height:auto}.rendered_html img.unconfined,.rendered_html svg.unconfined{max-width:none}div.text_cell{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}@media (max-width:540px){div.text_cell>div.prompt{display:none}}div.text_cell_render{outline:0;resize:none;width:inherit;border-style:none;padding:.5em .5em .5em .4em;color:#000;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}a.anchor-link:link{text-decoration:none;padding:0 20px;visibility:hidden}h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anchor-link,h5:hover .anchor-link,h6:hover .anchor-link{visibility:visible}.text_cell.rendered .input_area{display:none}.text_cell.rendered .rendered_html{overflow-x:auto}.text_cell.unrendered .text_cell_render{display:none}.cm-header-1,.cm-header-2,.cm-header-3,.cm-header-4,.cm-header-5,.cm-header-6{font-weight:700;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}.cm-header-1{font-size:185.7%}.cm-header-2{font-size:157.1%}.cm-header-3{font-size:128.6%}.cm-header-4{font-size:110%}.cm-header-5,.cm-header-6{font-size:100%;font-style:italic}/*!
+*
+* IPython notebook webapp
+*
+*/@media (max-width:767px){.notebook_app{padding-left:0;padding-right:0}}#ipython-main-app{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;height:100%}div#notebook_panel{margin:0;padding:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;height:100%}#notebook{font-size:14px;line-height:20px;overflow-y:hidden;overflow-x:auto;width:100%;padding-top:20px;margin:0;outline:0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;min-height:100%}@media not print{#notebook-container{padding:15px;background-color:#fff;min-height:0;-webkit-box-shadow:0 0 12px 1px rgba(87,87,87,.2);box-shadow:0 0 12px 1px rgba(87,87,87,.2)}}div.ui-widget-content{border:1px solid #ababab;outline:0}pre.dialog{background-color:#f7f7f7;border:1px solid #ddd;border-radius:2px;padding:.4em .4em .4em 2em}p.dialog{padding:.2em}code,kbd,pre,samp{white-space:pre-wrap}#fonttest{font-family:monospace}p{margin-bottom:0}.end_space{min-height:100px;transition:height .2s ease}.notebook_app #header{-webkit-box-shadow:0 0 12px 1px rgba(87,87,87,.2);box-shadow:0 0 12px 1px rgba(87,87,87,.2)}@media not print{.notebook_app{background-color:#eee}}.celltoolbar{border:thin solid #CFCFCF;border-bottom:none;background:#EEE;border-radius:2px 2px 0 0;width:100%;height:29px;padding-right:4px;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch;-webkit-box-pack:end;-moz-box-pack:end;box-pack:end;justify-content:flex-end;font-size:87%;padding-top:3px}@media print{.edit_mode div.cell.selected{border-color:transparent}div.code_cell{page-break-inside:avoid}#notebook-container{width:100%}.celltoolbar{display:none}}.ctb_hideshow{display:none;vertical-align:bottom}.ctb_global_show .ctb_show.ctb_hideshow{display:block}.ctb_global_show .ctb_show+.input_area,.ctb_global_show .ctb_show+div.text_cell_input,.ctb_global_show .ctb_show~div.text_cell_render{border-top-right-radius:0;border-top-left-radius:0}.ctb_global_show .ctb_show~div.text_cell_render{border:1px solid #cfcfcf}.celltoolbar select{color:#555;background-color:#fff;background-image:none;border:1px solid #ccc;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;line-height:1.5;border-radius:1px;width:inherit;font-size:inherit;height:22px;padding:0;display:inline-block}.celltoolbar select:focus{border-color:#66afe9;outline:0;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)}.celltoolbar select::-moz-placeholder{color:#999;opacity:1}.celltoolbar select:-ms-input-placeholder{color:#999}.celltoolbar select::-webkit-input-placeholder{color:#999}.celltoolbar select[disabled],.celltoolbar select[readonly],fieldset[disabled] .celltoolbar select{background-color:#eee;opacity:1}.celltoolbar select[disabled],fieldset[disabled] .celltoolbar select{cursor:not-allowed}textarea.celltoolbar select{height:auto}select.celltoolbar select{height:30px;line-height:30px}select[multiple].celltoolbar select,textarea.celltoolbar select{height:auto}.celltoolbar label{margin-left:5px;margin-right:5px}.completions{position:absolute;z-index:10;overflow:hidden;border:1px solid #ababab;border-radius:2px;-webkit-box-shadow:0 6px 10px -1px #adadad;box-shadow:0 6px 10px -1px #adadad;line-height:1}.completions select{background:#fff;outline:0;border:none;padding:0;margin:0;overflow:auto;font-family:monospace;font-size:110%;color:#000;width:auto}.completions select option.context{color:#286090}#kernel_logo_widget{float:right!important;float:right}#kernel_logo_widget .current_kernel_logo{display:none;margin-top:-1px;margin-bottom:-1px;width:32px;height:32px}#menubar{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;margin-top:1px}#menubar .navbar{border-top:1px;border-radius:0 0 2px 2px;margin-bottom:0}#menubar .navbar-toggle{float:left;padding-top:7px;padding-bottom:7px;border:none}#menubar .navbar-collapse{clear:left}.nav-wrapper{border-bottom:1px solid #e7e7e7}i.menu-icon{padding-top:4px}ul#help_menu li a{overflow:hidden;padding-right:2.2em}ul#help_menu li a i{margin-right:-1.2em}.dropdown-submenu{position:relative}.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px}.dropdown-submenu:hover>.dropdown-menu{display:block}.dropdown-submenu>a:after{font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;display:block;content:"\f0da";float:right;color:#333;margin-top:2px;margin-right:-10px}.dropdown-submenu>a:after.pull-left{margin-right:.3em}.dropdown-submenu>a:after.pull-right{margin-left:.3em}.dropdown-submenu:hover>a:after{color:#262626}.dropdown-submenu.pull-left{float:none}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px}#notification_area{float:right!important;float:right;z-index:10}.indicator_area{float:right!important;float:right;color:#777;margin-left:5px;margin-right:5px;z-index:10;text-align:center;width:auto}#kernel_indicator{float:right!important;float:right;color:#777;margin-left:5px;margin-right:5px;z-index:10;text-align:center;width:auto;border-left:1px solid}#kernel_indicator .kernel_indicator_name{padding-left:5px;padding-right:5px}#modal_indicator{float:right!important;float:right;color:#777;margin-left:5px;margin-right:5px;z-index:10;text-align:center;width:auto}#readonly-indicator{float:right!important;float:right;color:#777;z-index:10;text-align:center;width:auto;display:none;margin:2px 0 0}.modal_indicator:before{width:1.28571429em;text-align:center}.edit_mode .modal_indicator:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f040"}.edit_mode .modal_indicator:before.pull-left{margin-right:.3em}.edit_mode .modal_indicator:before.pull-right{margin-left:.3em}.command_mode .modal_indicator:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:' '}.command_mode .modal_indicator:before.pull-left{margin-right:.3em}.command_mode .modal_indicator:before.pull-right{margin-left:.3em}.kernel_idle_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f10c"}.kernel_idle_icon:before.pull-left{margin-right:.3em}.kernel_idle_icon:before.pull-right{margin-left:.3em}.kernel_busy_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f111"}.kernel_busy_icon:before.pull-left{margin-right:.3em}.kernel_busy_icon:before.pull-right{margin-left:.3em}.kernel_dead_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f1e2"}.kernel_dead_icon:before.pull-left{margin-right:.3em}.kernel_dead_icon:before.pull-right{margin-left:.3em}.kernel_disconnected_icon:before{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;content:"\f127"}.kernel_disconnected_icon:before.pull-left{margin-right:.3em}.kernel_disconnected_icon:before.pull-right{margin-left:.3em}.notification_widget{z-index:10;background:rgba(240,240,240,.5);margin-right:4px;color:#333;background-color:#fff;border-color:#ccc}.notification_widget.active,.notification_widget.focus,.notification_widget:active,.notification_widget:focus,.notification_widget:hover,.open>.dropdown-toggle.notification_widget{color:#333;background-color:#e6e6e6;border-color:#adadad}.notification_widget.active,.notification_widget:active,.open>.dropdown-toggle.notification_widget{background-image:none}.notification_widget.disabled,.notification_widget.disabled.active,.notification_widget.disabled.focus,.notification_widget.disabled:active,.notification_widget.disabled:focus,.notification_widget.disabled:hover,.notification_widget[disabled],.notification_widget[disabled].active,.notification_widget[disabled].focus,.notification_widget[disabled]:active,.notification_widget[disabled]:focus,.notification_widget[disabled]:hover,fieldset[disabled] .notification_widget,fieldset[disabled] .notification_widget.active,fieldset[disabled] .notification_widget.focus,fieldset[disabled] .notification_widget:active,fieldset[disabled] .notification_widget:focus,fieldset[disabled] .notification_widget:hover{background-color:#fff;border-color:#ccc}.notification_widget .badge{color:#fff;background-color:#333}.notification_widget.warning{color:#fff;background-color:#f0ad4e;border-color:#eea236}.notification_widget.warning.active,.notification_widget.warning.focus,.notification_widget.warning:active,.notification_widget.warning:focus,.notification_widget.warning:hover,.open>.dropdown-toggle.notification_widget.warning{color:#fff;background-color:#ec971f;border-color:#d58512}.notification_widget.warning.active,.notification_widget.warning:active,.open>.dropdown-toggle.notification_widget.warning{background-image:none}.notification_widget.warning.disabled,.notification_widget.warning.disabled.active,.notification_widget.warning.disabled.focus,.notification_widget.warning.disabled:active,.notification_widget.warning.disabled:focus,.notification_widget.warning.disabled:hover,.notification_widget.warning[disabled],.notification_widget.warning[disabled].active,.notification_widget.warning[disabled].focus,.notification_widget.warning[disabled]:active,.notification_widget.warning[disabled]:focus,.notification_widget.warning[disabled]:hover,fieldset[disabled] .notification_widget.warning,fieldset[disabled] .notification_widget.warning.active,fieldset[disabled] .notification_widget.warning.focus,fieldset[disabled] .notification_widget.warning:active,fieldset[disabled] .notification_widget.warning:focus,fieldset[disabled] .notification_widget.warning:hover{background-color:#f0ad4e;border-color:#eea236}.notification_widget.warning .badge{color:#f0ad4e;background-color:#fff}.notification_widget.success{color:#fff;background-color:#5cb85c;border-color:#4cae4c}.notification_widget.success.active,.notification_widget.success.focus,.notification_widget.success:active,.notification_widget.success:focus,.notification_widget.success:hover,.open>.dropdown-toggle.notification_widget.success{color:#fff;background-color:#449d44;border-color:#398439}.notification_widget.success.active,.notification_widget.success:active,.open>.dropdown-toggle.notification_widget.success{background-image:none}.notification_widget.success.disabled,.notification_widget.success.disabled.active,.notification_widget.success.disabled.focus,.notification_widget.success.disabled:active,.notification_widget.success.disabled:focus,.notification_widget.success.disabled:hover,.notification_widget.success[disabled],.notification_widget.success[disabled].active,.notification_widget.success[disabled].focus,.notification_widget.success[disabled]:active,.notification_widget.success[disabled]:focus,.notification_widget.success[disabled]:hover,fieldset[disabled] .notification_widget.success,fieldset[disabled] .notification_widget.success.active,fieldset[disabled] .notification_widget.success.focus,fieldset[disabled] .notification_widget.success:active,fieldset[disabled] .notification_widget.success:focus,fieldset[disabled] .notification_widget.success:hover{background-color:#5cb85c;border-color:#4cae4c}.notification_widget.success .badge{color:#5cb85c;background-color:#fff}.notification_widget.info{color:#fff;background-color:#5bc0de;border-color:#46b8da}.notification_widget.info.active,.notification_widget.info.focus,.notification_widget.info:active,.notification_widget.info:focus,.notification_widget.info:hover,.open>.dropdown-toggle.notification_widget.info{color:#fff;background-color:#31b0d5;border-color:#269abc}.notification_widget.info.active,.notification_widget.info:active,.open>.dropdown-toggle.notification_widget.info{background-image:none}.notification_widget.info.disabled,.notification_widget.info.disabled.active,.notification_widget.info.disabled.focus,.notification_widget.info.disabled:active,.notification_widget.info.disabled:focus,.notification_widget.info.disabled:hover,.notification_widget.info[disabled],.notification_widget.info[disabled].active,.notification_widget.info[disabled].focus,.notification_widget.info[disabled]:active,.notification_widget.info[disabled]:focus,.notification_widget.info[disabled]:hover,fieldset[disabled] .notification_widget.info,fieldset[disabled] .notification_widget.info.active,fieldset[disabled] .notification_widget.info.focus,fieldset[disabled] .notification_widget.info:active,fieldset[disabled] .notification_widget.info:focus,fieldset[disabled] .notification_widget.info:hover{background-color:#5bc0de;border-color:#46b8da}.notification_widget.info .badge{color:#5bc0de;background-color:#fff}.notification_widget.danger{color:#fff;background-color:#d9534f;border-color:#d43f3a}.notification_widget.danger.active,.notification_widget.danger.focus,.notification_widget.danger:active,.notification_widget.danger:focus,.notification_widget.danger:hover,.open>.dropdown-toggle.notification_widget.danger{color:#fff;background-color:#c9302c;border-color:#ac2925}.notification_widget.danger.active,.notification_widget.danger:active,.open>.dropdown-toggle.notification_widget.danger{background-image:none}.notification_widget.danger.disabled,.notification_widget.danger.disabled.active,.notification_widget.danger.disabled.focus,.notification_widget.danger.disabled:active,.notification_widget.danger.disabled:focus,.notification_widget.danger.disabled:hover,.notification_widget.danger[disabled],.notification_widget.danger[disabled].active,.notification_widget.danger[disabled].focus,.notification_widget.danger[disabled]:active,.notification_widget.danger[disabled]:focus,.notification_widget.danger[disabled]:hover,fieldset[disabled] .notification_widget.danger,fieldset[disabled] .notification_widget.danger.active,fieldset[disabled] .notification_widget.danger.focus,fieldset[disabled] .notification_widget.danger:active,fieldset[disabled] .notification_widget.danger:focus,fieldset[disabled] .notification_widget.danger:hover{background-color:#d9534f;border-color:#d43f3a}.notification_widget.danger .badge{color:#d9534f;background-color:#fff}div#pager{background-color:#fff;font-size:14px;line-height:20px;overflow:hidden;display:none;position:fixed;bottom:0;width:100%;max-height:50%;padding-top:8px;-webkit-box-shadow:0 0 12px 1px rgba(87,87,87,.2);box-shadow:0 0 12px 1px rgba(87,87,87,.2);z-index:100;top:auto!important}div#pager pre{line-height:1.21429em;color:#000;background-color:#f7f7f7;padding:.4em}div#pager #pager-button-area{position:absolute;top:8px;right:20px}div#pager #pager-contents{position:relative;overflow:auto;width:100%;height:100%}div#pager #pager-contents #pager-container{position:relative;padding:15px 0;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}div#pager .ui-resizable-handle{top:0;height:8px;background:#f7f7f7;border-top:1px solid #cfcfcf;border-bottom:1px solid #cfcfcf}div#pager .ui-resizable-handle::after{content:'';top:2px;left:50%;height:3px;width:30px;margin-left:-15px;position:absolute;border-top:1px solid #cfcfcf}.quickhelp{display:-webkit-box;-webkit-box-orient:horizontal;display:-moz-box;-moz-box-orient:horizontal;display:box;box-orient:horizontal;box-align:stretch;display:flex;flex-direction:row;align-items:stretch}.shortcut_key{display:inline-block;width:20ex;text-align:right;font-family:monospace}.shortcut_descr{display:inline-block;-webkit-box-flex:1;-moz-box-flex:1;box-flex:1;flex:1}span.save_widget{margin-top:6px}span.save_widget span.filename{height:1em;line-height:1em;padding:3px;margin-left:16px;border:none;font-size:146.5%;border-radius:2px}span.save_widget span.filename:hover{background-color:#e6e6e6}span.autosave_status,span.checkpoint_status{font-size:small}@media (max-width:767px){span.save_widget{font-size:small}span.autosave_status,span.checkpoint_status{display:none}}@media (min-width:768px)and (max-width:991px){span.checkpoint_status{display:none}span.autosave_status{font-size:x-small}}.toolbar{padding:0;margin-left:-5px;margin-top:2px;margin-bottom:5px;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.toolbar label,.toolbar select{width:auto;vertical-align:middle;margin-bottom:0;display:inline;font-size:92%;margin-left:.3em;margin-right:.3em;padding:3px 0 0}.toolbar .btn{padding:2px 8px}.toolbar .btn-group{margin-top:0;margin-left:5px}#maintoolbar{margin-bottom:-3px;margin-top:-8px;border:0;min-height:27px;margin-left:0;padding-top:11px;padding-bottom:3px}#maintoolbar .navbar-text{float:none;vertical-align:middle;text-align:right;margin-left:5px;margin-right:0;margin-top:0}.select-xs{height:24px}@-moz-keyframes fadeOut{from{opacity:1}to{opacity:0}}@-webkit-keyframes fadeOut{from{opacity:1}to{opacity:0}}@-moz-keyframes fadeIn{from{opacity:0}to{opacity:1}}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}.bigtooltip{overflow:auto;height:200px;-webkit-transition-property:height;-webkit-transition-duration:500ms;-moz-transition-property:height;-moz-transition-duration:500ms;transition-property:height;transition-duration:500ms}.smalltooltip{-webkit-transition-property:height;-webkit-transition-duration:500ms;-moz-transition-property:height;-moz-transition-duration:500ms;transition-property:height;transition-duration:500ms;text-overflow:ellipsis;overflow:hidden;height:80px}.tooltipbuttons{position:absolute;padding-right:15px;top:0;right:0}.tooltiptext{padding-right:30px}.ipython_tooltip{max-width:700px;animation:fadeOut 400ms;-webkit-animation:fadeIn 400ms;-moz-animation:fadeIn 400ms;animation:fadeIn 400ms;vertical-align:middle;background-color:#f7f7f7;overflow:visible;border:1px solid #ababab;outline:0;padding:3px 3px 3px 7px;padding-left:7px;font-family:monospace;min-height:50px;-moz-box-shadow:0 6px 10px -1px #adadad;-webkit-box-shadow:0 6px 10px -1px #adadad;box-shadow:0 6px 10px -1px #adadad;border-radius:2px;position:absolute;z-index:1000}.ipython_tooltip a{float:right}.ipython_tooltip .tooltiptext pre{border:0;border-radius:0;font-size:100%;background-color:#f7f7f7}.pretooltiparrow{left:0;margin:0;top:-16px;width:40px;height:16px;overflow:hidden;position:absolute}.pretooltiparrow:before{background-color:#f7f7f7;border:1px solid #ababab;z-index:11;content:"";position:absolute;left:15px;top:10px;width:25px;height:25px;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg)}.terminal-app{background:#eee}.terminal-app #header{background:#fff;-webkit-box-shadow:0 0 12px 1px rgba(87,87,87,.2);box-shadow:0 0 12px 1px rgba(87,87,87,.2)}.terminal-app .terminal{float:left;font-family:monospace;color:#fff;background:#000;padding:.4em;border-radius:2px;-webkit-box-shadow:0 0 12px 1px rgba(87,87,87,.4);box-shadow:0 0 12px 1px rgba(87,87,87,.4)}.terminal-app .terminal,.terminal-app .terminal dummy-screen{line-height:1em;font-size:14px}.terminal-app .terminal-cursor{color:#000;background:#fff}.terminal-app #terminado-container{margin-top:20px}
+/*# sourceMappingURL=style.min.css.map */
+    </style>
+
+    <style type="text/css">
+        .highlight .hll { background-color: #ffffcc }
+    .highlight  { background: #f8f8f8; }
+    .highlight .c { color: #408080; font-style: italic } /* Comment */
+    .highlight .err { border: 1px solid #FF0000 } /* Error */
+    .highlight .k { color: #008000; font-weight: bold } /* Keyword */
+    .highlight .o { color: #666666 } /* Operator */
+    .highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+    .highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+    .highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+    .highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+    .highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+    .highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+    .highlight .gd { color: #A00000 } /* Generic.Deleted */
+    .highlight .ge { font-style: italic } /* Generic.Emph */
+    .highlight .gr { color: #FF0000 } /* Generic.Error */
+    .highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+    .highlight .gi { color: #00A000 } /* Generic.Inserted */
+    .highlight .go { color: #888888 } /* Generic.Output */
+    .highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+    .highlight .gs { font-weight: bold } /* Generic.Strong */
+    .highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+    .highlight .gt { color: #0044DD } /* Generic.Traceback */
+    .highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+    .highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+    .highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+    .highlight .kp { color: #008000 } /* Keyword.Pseudo */
+    .highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+    .highlight .kt { color: #B00040 } /* Keyword.Type */
+    .highlight .m { color: #666666 } /* Literal.Number */
+    .highlight .s { color: #BA2121 } /* Literal.String */
+    .highlight .na { color: #7D9029 } /* Name.Attribute */
+    .highlight .nb { color: #008000 } /* Name.Builtin */
+    .highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+    .highlight .no { color: #880000 } /* Name.Constant */
+    .highlight .nd { color: #AA22FF } /* Name.Decorator */
+    .highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+    .highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+    .highlight .nf { color: #0000FF } /* Name.Function */
+    .highlight .nl { color: #A0A000 } /* Name.Label */
+    .highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+    .highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+    .highlight .nv { color: #19177C } /* Name.Variable */
+    .highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+    .highlight .w { color: #bbbbbb } /* Text.Whitespace */
+    .highlight .mb { color: #666666 } /* Literal.Number.Bin */
+    .highlight .mf { color: #666666 } /* Literal.Number.Float */
+    .highlight .mh { color: #666666 } /* Literal.Number.Hex */
+    .highlight .mi { color: #666666 } /* Literal.Number.Integer */
+    .highlight .mo { color: #666666 } /* Literal.Number.Oct */
+    .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+    .highlight .sc { color: #BA2121 } /* Literal.String.Char */
+    .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+    .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+    .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+    .highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+    .highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+    .highlight .sx { color: #008000 } /* Literal.String.Other */
+    .highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+    .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+    .highlight .ss { color: #19177C } /* Literal.String.Symbol */
+    .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+    .highlight .vc { color: #19177C } /* Name.Variable.Class */
+    .highlight .vg { color: #19177C } /* Name.Variable.Global */
+    .highlight .vi { color: #19177C } /* Name.Variable.Instance */
+    .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
+        </style>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Lectura-1">Lectura 1<a class="anchor-link" href="#Lectura-1">&#182;</a></h2><h2 id="An&#225;lisis-exploratorio-datos-(EDA-por-Exporatory-Data-Analysis)">An&#225;lisis exploratorio datos (EDA por Exporatory Data Analysis)<a class="anchor-link" href="#An&#225;lisis-exploratorio-datos-(EDA-por-Exporatory-Data-Analysis)">&#182;</a></h2><p>Es un enfoque del análisis de datos que usa varias técnicas para mostrar información oculta en los datos y maximizar la información acerca un conjunto de datos. Es el primer paso en el proceso de análisis de datos. Ayuda a comprender mejor los datos con los que se cuenta. EDA tiene mucho más que ver con datos obtenidos a través de observaciones que por medio de las formalidades de un diseño de experimentos.</p>
+<p>Los objetivos de EDA son:</p>
+<ul>
+<li>La presentación de los datos. Para representar las k-tuplas, o árboles, o hipergrafoss, que constituyen los datos, de una manera que coincida con nuestras capacidades de manejo de información, especialmente con nuestra visión.</li>
+<li>Reconocimiento de patrones. Para encontrar patrones que no son obvios.</li>
+<li>Formulación de hipótesis. Encontrar hipótesis de explicaciones razonables para explicar los patrones.</li>
+<li>Buscar hipótesis de mayores explicatividades, como por ejemplo tratar los residuos como nuevos datos. Si las hipótesis se mejoran demasiado, el analista estaría haciendo ciencia ordinaria en lugar de EDA. Por lo tanto, EDA es intermedia entre estadística descriptiva y ciencia dura.</li>
+<li>Racionalidad tipo II. Para maximizar la utilidad esperada permitiendo los costos estimados y los retrasos de la computación y el pensamiento. Este principio siempre se usa, pero es especialmente relevante para EDA debido a la gran variedad de posibles formas de examinar los datos.</li>
+</ul>
+<p>Los métodos para realizar el análisis exploratorio de datos pueden clasificarse en:</p>
+<ul>
+<li>Métodos univariados no gráficos</li>
+<li>Métodos univariados  gráficos</li>
+<li>Métodos multi-variados no gráficos</li>
+<li>Métodos multi-variados gráficos</li>
+</ul>
+<h2 id="Nuestros-objetivos-para-esta-parte">Nuestros objetivos para esta parte<a class="anchor-link" href="#Nuestros-objetivos-para-esta-parte">&#182;</a></h2><ul>
+<li>Desarrollar la mentalidad EDA <ul>
+<li>Preguntas a tener en cuenta al explorar</li>
+<li>Cosas a tener en cuenta</li>
+</ul>
+</li>
+<li>Aprender los métodos básicos para un EDA efectivo<ul>
+<li>Extracción de información</li>
+<li>Cálculo de estadísticas resumidas</li>
+<li>Gráficos básico</li>
+<li>Mapeo básico</li>
+</ul>
+</li>
+</ul>
+<p>EDA es una extensión de estadística descriptiva y gráfica. Pensemos que las estadísticas descriptivas incluyen estadísticas gráficas. El propósito de las estadísticas descriptivas es principalmente presentar las características más destacadas de los datos en una forma inteligible. EDA va un poco más allá de las estadísticas descriptivas, aunque la distinción es más cuantitativa que cualitativa. El analista exploratorio de datos sabe que quiere formular hipótesis, mientras que el estadístico descriptivo es menos consciente de ello.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Estad&#237;stica-descriptiva">Estad&#237;stica descriptiva<a class="anchor-link" href="#Estad&#237;stica-descriptiva">&#182;</a></h2><p>Trata esta parte de la estadística del resumen y descripción de los datos. Dicho resumen puede ser tabular, gráfico o numérico. Este análisis se limita así mismo a los datos recolectados, y no se realiza inferencia alguna o generalizaciones acerca de la totalidad de donde provienen esas observaciones (Población). La estadística descriptiva aprovecha nuestra percepción espacial de las tablas y, más obviamente, de los diagramas. Pero la estadística descriptiva no solo se refiere a la presentación de datos a la vista, sino también a la llamada "reducción de los datos", como cuando se calculan los promedios. Quizás el primer ejemplo de reducción de datos en todas las civilizaciones y tribus fue contar</p>
+<h3 id="FUENTES-DE-LOS-DATOS">FUENTES DE LOS DATOS<a class="anchor-link" href="#FUENTES-DE-LOS-DATOS">&#182;</a></h3><ul>
+<li><strong>Datos internos y externos:</strong> Los datos internos son los tomados de los archivos, los procedimientos de operaciones estandarizadas, o experimentos planeados por la división de investigación de una compañía. Ejemplos: Ganancias, pérdidas,  salarios de los empleados, datos de producción, etc. 
+Los datos externos proceden de fuentes externas a la empresa. Los datos externos pueden ser de dos tipos primarios y secundarios. Los datos primarios son obtenidos de las empresas que originalmente los recolectaron. Los datos secundarios son obtenidos de una fuente distinta a aquella que originalmente los recolectó.</li>
+</ul>
+<h3 id="TERMINOLOG&#205;A-ESTAD&#205;STICA">TERMINOLOG&#205;A ESTAD&#205;STICA<a class="anchor-link" href="#TERMINOLOG&#205;A-ESTAD&#205;STICA">&#182;</a></h3><ul>
+<li><strong>Población:</strong> la población son todas las unidades bajo estudio. Una característica (<strong>variable aleatoria</strong>) asociada a la población es un atributo de una unidad de la población.</li>
+<li><strong>Censo de la población:</strong> Es la evaluación de la característica en cada una de las unidades de la población.</li>
+<li><strong>Muestra:</strong> Es una parte de la población en donde la característica es estudiada, para luego poder realizar inferencias del estudio de la muestra acerca del total de la población.</li>
+<li><strong>Muestra Aleatoria:</strong> Una Muestra aleatoria de tamaño n de la distribución de X es una colección de n independientes variables aleatorias, cada una con la misma distribución de X.</li>
+<li><strong>Error Muestral:</strong> Este es la diferencia entre estudiar una muestra e inducir un resultado acerca de la característica poblacional y determinar el resultado realizando un censo de la población y evaluando la característica poblacional.</li>
+<li><strong>Error de No - Muestreo:</strong> Son errores que ocurren en la recolección o tabulación de los datos estadísticos que no pueden atribuirse a errores muestrales. Pueden aparecer en los censos o en las muestras.</li>
+<li><strong>Parámetro:</strong> Un parámetro es una medida numérica de la característica de la población.</li>
+<li><strong>Estadístico o Estimador:</strong> Es una medida numérica calculada del conjunto de observaciones de la muestra.</li>
+</ul>
+<h3 id="ADQUISICI&#211;N-DE-DATOS">ADQUISICI&#211;N DE DATOS<a class="anchor-link" href="#ADQUISICI&#211;N-DE-DATOS">&#182;</a></h3><ul>
+<li><strong>Muestreo estadístico:</strong> Un muestreo es el proceso de recolección de datos de unas unidades de una población existente, sin ningún control particular sobre otros factores que puedan afectar la característica de la población de interés en el estudio.</li>
+<li><strong>Experimento estadístico:</strong> Es un proceso de recolección de datos acerca de la característica de una población donde se ejerce control sobre otros factores que pueden afectar la característica de la población en estudio.</li>
+</ul>
+<h3 id="VARIABLES-Y-ESCALAS-DE-MEDIDAS">VARIABLES Y ESCALAS DE MEDIDAS<a class="anchor-link" href="#VARIABLES-Y-ESCALAS-DE-MEDIDAS">&#182;</a></h3><h4 id="Variable:">Variable:<a class="anchor-link" href="#Variable:">&#182;</a></h4><p>Es la característica de la población bajo estudio y puede tomar dos o más diferentes valores dentro de las unidades que componen la población. Las variables pueden ser independientes o dependientes, dependiendo de cual es la variable base de interés y cuales son las variables que la afectan.</p>
+<h4 id="Escalas-de-medidas:">Escalas de medidas:<a class="anchor-link" href="#Escalas-de-medidas:">&#182;</a></h4><p>Las escalas de medidas son cuatro:</p>
+<ul>
+<li><p>Nominal: la medida nominal (asignar un nombre) casi ni merece tal denominación. En tal caso, se trata de agrupar en clases, de modo que todos los que pertenezcan a la misma clase sean equivalentes respecto del atributo o propiedad en estudio, después de lo cual se le asignan nombres a las clases y el hecho de a que a veces, en lugar de denominaciones, se le asignen números, pude ser la razón por la cual se denominen nominales. Los números asignados a las escalas nominales tienen iguales propiedades que los demás, por lo cual pueden sumarse, restarse, dividirse o compararse entre sí. Pero si recurrimos a una medida nominal en la asignación de números, en ningún momento podemos pensar en nuestro manejo con el orden, tamaño y demás propiedades de las cifras, impliquen algo respecto de los objetos medidos, puesto que no tuvimos en cuenta el orden, tamaño o demás propiedades de los números asignados a tales objetos. 
+Ejemplo: Clasificar sexo asignando 0 a mujer y 1 a hombre.</p>
+</li>
+<li><p>Ordinal: Difiere de la anterior en que el orden de los números tiene sentido, pero la magnitud de los número no, de modo que, si la cifra asignada al objeto A es mayor que la del objeto B, puede inferirse que A posee un mayor grado de atributo que Ejemplo: Respuesta de selección múltiple:</p>
+</li>
+</ul>
+<table>
+<thead><tr>
+<th>Nunca</th>
+<th>Rara vez</th>
+<th>Normal</th>
+<th>Casi siempre</th>
+<th>Siempre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-2</td>
+<td>-1</td>
+<td>0</td>
+<td>+1</td>
+<td>+2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Intervalos: El orden relativo de los números es importante, así como la distancia, de tal forma que la distancia entre dos números cualquiera puede ser expresados en algún número de unidades. El origen (cero) en esta escala es necesario pero su localización es arbitraria y no indica que el objeto carece de la característica. Ejemplo las escalas de temperatura Celsius y Fharenheit.</p>
+</li>
+<li><p>Razón: Aquí el tamaño del intervalo es importante, así como la razón entre dos números tiene significado. En esta escala se puede decir que un número es el doble o triple que otro. El punto cero  no es arbitrario y indica ausencia del atributo en el objeto. Ejemplo: peso, longitud. Se tratará en esta parte de la materia con variables que puedan ser medidas al menos en escala de intervalos.</p>
+</li>
+</ul>
+<p>Cuando se estudia una variable aleatoria $X$, una pregunta importante a ser contestada es, “¿A cuál de la familias de variables aleatorias pertenece $X$?” En el caso discreto es a menudo posible determinar la familia apropiada de la descripción física del experimento. El único trabajo que resta es aproximar los valores de los parámetros que caracterizan la distribución. Las variables continuas son más difíciles de manejar. Para determinar la familia a la cual tal variable pertenece, debemos tener una idea de la forma de su densidad de probabilidad.</p>
+<h3 id="Medidas-de-tendencia-central">Medidas de tendencia central<a class="anchor-link" href="#Medidas-de-tendencia-central">&#182;</a></h3><ul>
+<li>Media Aritmética: Este valor representa el punto medio de las observaciones, si consideramos la frecuencia de cada observación como su peso relativo y la distancia de la observación a la media como la longitud del brazo, la media sería el punto donde la suma de momentos es igual a cero o el centro de masa. La media aritmetica se calcula como </li>
+</ul>
+<p>$\bar{x}=\sum\limits_{i=1}^n\frac{x_i}{n}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tiempo</span><span class="o">=</span><span class="p">[[</span><span class="mi">60</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">80</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">65</span>
+         <span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">70</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">40</span><span class="p">,</span><span class="mi">90</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">60</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">18</span><span class="p">,</span><span class="mi">40</span><span class="p">]]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[3]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>41.256410256410255</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span><span class="o">*</span><span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[4]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>41.256410256410255</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Mediana: La mediana separa el conjunto de datos de forma tal que si se ordenan los datos de mayor a menor el número de observaciones con valores menores iguales a la mediana es mayor al 50%, es decir que por debajo de este punto se encuentran al menos el 50% de las observaciones y por encima de este punto se encuentran al menos el 50% de las observaciones (incluido el punto). </li>
+</ul>
+<p>$\tilde{x}\rightarrow F(X\leq \tilde{x})\geq 0.5$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>La mediana debe preferirse sobre la media como medida de tendencia central cuando exista uno o varios datos extremos que alteren significativamente la media aritmética, o en caso de datos agrupados cuando la última clase tenga límite superior abierto o la primera clase tenga límite inferior abierto.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>40.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tiempo_ordered</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tiempo_ordered</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[ 5,  5, 10, 12, 17, 18, 20, 22, 22, 23, 25, 25, 30, 30, 30, 30,
+        30, 40, 40, 40, 45, 45, 45, 45, 50, 50, 50, 50, 55, 60, 60, 60,
+        60, 65, 65, 70, 80, 90, 90]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tiempo_ordered</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">19</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>40</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Moda: La moda de una serie de datos corresponde al valor que tiene la mayor frecuencia de observaciones por ejemplo en la siguiente serie de datos el valor de la moda es 10 con una frecuencia de 7.</li>
+</ul>
+<p>10  11  13  11  15  10  9   10  15  13  12  14
+10  8   16  11  9   12  10  10  9   11  13  12
+8   15  10  12  11  10  9   13  14  10  9   11</p>
+<p>Cuando los datos se encuentran agrupados el procedimiento a seguir es distinto; primero debe ubicarse el intervalo de clase de mayor frecuencia; esta es la clase modal</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">16</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">9</span>
+              <span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">13</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bincount</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="n">ii</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nonzero</span><span class="p">(</span><span class="n">y</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">zip</span><span class="p">(</span><span class="n">ii</span><span class="p">,</span><span class="n">y</span><span class="p">[</span><span class="n">ii</span><span class="p">])</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;zip at 0x159f97c9f08&gt;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Percentiles: El 100p percentil de cualquiera población o muestra de un conjunto de observaciones que han sido ordenadas en forma ascendente es el valor que al menos el 100p por ciento de las medidas están en o a la izquierda (Menor igual que) de él; y al menos 100(1-p) por ciento  de las medidas están en o a la derecha (Mayor igual que) de tal valor.</li>
+</ul>
+<p>$x_p\rightarrow F(X\leq x_p)\geq p$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">tiempo</span><span class="p">,[</span><span class="mi">25</span><span class="p">,</span><span class="mi">50</span><span class="p">,</span><span class="mi">75</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([24. , 40. , 57.5])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Medidas-de-dispersion">Medidas de dispersion<a class="anchor-link" href="#Medidas-de-dispersion">&#182;</a></h3><ul>
+<li><p>Rango: es la diferencia entre el mayor valor observado y el menor valor observado</p>
+</li>
+<li><p>Varianza: esta medida sirve para mostrar el grado de dispersión de los datos con respecto a la media aritmética $\bar{x}$. Se calcula como:</p>
+</li>
+</ul>
+<p>$S^2=\frac{\sum\limits_{i=1}^n(x_i-\bar{x})^2}{n}$</p>
+<p>Dado que esta medida está en unidades de medición elevado al cuadrado se acostumbra a utilizar la desviación estándar $S=\sqrt{S^2}$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rango</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rango</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>85
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>473.01117685733084</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>21.74882012563741</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numerador</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">tiempo</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">tiempo</span><span class="p">))</span><span class="o">*</span><span class="p">(</span><span class="n">tiempo</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">numerador</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tiempo</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>473.01117685733084</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var_tiempo</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">inner</span><span class="p">((</span><span class="n">tiempo</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)),(</span><span class="n">tiempo</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">tiempo</span><span class="p">)))</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="n">tiempo</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">var_tiempo</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[17]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([[473.01117686]])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Histograma-de-frecuencias">Histograma de frecuencias<a class="anchor-link" href="#Histograma-de-frecuencias">&#182;</a></h1><h2 id="Tabla-de-frecuencias">Tabla de frecuencias<a class="anchor-link" href="#Tabla-de-frecuencias">&#182;</a></h2><p>Realiza una partición del rango de los datos en $n$ intervalos y realiza un conteo de las observaciones pertenecientes a cada uno de ellos. Para determinar la amplitud de los intervalos y los límites inferior y superior respectivos algunas guías han de ser seguidas:</p>
+<ol>
+<li>Los intervalos deben ser mutuamente excluyentes y colectivamente exhaustivos.</li>
+<li>Se acostumbra a que el limite inferior del intervalo sea cerrado y el limite superior abierto esto es $[lim_{Inf},lim_{Sup})$</li>
+<li>Dado que el histograma se utiliza para una primera aproximación de la función de densidad de probabilidad las caraterísticas de los intervalos deben ser tal que no haya intervalos vacíos, la frecuencia absoluta sea 0.</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">xarray</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mean_x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interval_1</span><span class="o">=</span><span class="p">((</span><span class="n">xarray</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">)</span><span class="o">&amp;</span><span class="p">(</span><span class="n">xarray</span><span class="o">&lt;=</span><span class="n">sd_x</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">interval_1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[22]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>18</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">range_x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span>
+<span class="n">numberOfIntervals</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">interval_width</span><span class="o">=</span><span class="p">(</span><span class="n">range_x</span><span class="o">+</span><span class="mf">0.1</span><span class="p">)</span><span class="o">/</span><span class="n">numberOfIntervals</span>
+<span class="n">bins</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span><span class="o">-</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span><span class="o">+</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">num</span><span class="o">=</span><span class="p">(</span><span class="n">numberOfIntervals</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span>
+<span class="n">binplace</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">digitize</span><span class="p">(</span><span class="n">xarray</span><span class="p">,</span> <span class="n">bins</span><span class="p">)</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">binplace</span><span class="p">)</span>
+<span class="n">bin_counts</span> <span class="o">=</span> <span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">xarray</span><span class="p">[</span><span class="n">binplace</span> <span class="o">==</span> <span class="n">i</span><span class="p">])</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">bins</span><span class="p">))]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bin_counts</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[-2.80702778 -1.9494944  -1.09196103 -0.23442766  0.62310571  1.48063908
+  2.33817246]
+[2 3 6 6 4 3 4 3 5 2 2 6 4 6 3 1 3 2 4 3 4 5 3 4 2 3 4 3 4 5 3 5 5 6 4 4 2
+ 3 3 2 4 6 3 5 5 5 4 5 1 3]
+[2, 7, 14, 12, 9, 6]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">weigth</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xarray</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">binplace</span><span class="p">,</span><span class="n">weigth</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span>
+<span class="n">intervals_name</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bins</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">lim_inf</span><span class="o">=</span><span class="n">bins</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">lim_sup</span><span class="o">=</span><span class="n">bins</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">label</span><span class="o">=</span><span class="s1">&#39;[&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">lim_inf</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;,&quot;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">lim_sup</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;)&quot;</span>
+    <span class="n">intervals_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">label</span><span class="p">)</span>
+<span class="n">freq_table</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">crosstab</span><span class="p">(</span><span class="n">binplace</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">xarray</span><span class="p">)))</span>    
+<span class="n">freq_table</span>
+<span class="n">freq_table</span><span class="o">.</span><span class="n">index</span><span class="o">=</span><span class="p">(</span><span class="n">intervals_name</span><span class="p">)</span>
+<span class="n">freq_table</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">([</span><span class="s1">&#39;Frequency&#39;</span><span class="p">])</span>
+<span class="n">freq_table</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[-2.8070277762092513,-1.949494404262662)
+[-1.949494404262662,-1.0919610323160729)
+[-1.0919610323160729,-0.2344276603694837)
+[-0.2344276603694837,0.6231057115771055)
+[0.6231057115771055,1.4806390835236947)
+[1.4806390835236947,2.338172455470284)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[26]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Frequency</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>[-2.8070277762092513,-1.949494404262662)</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>[-1.949494404262662,-1.0919610323160729)</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>[-1.0919610323160729,-0.2344276603694837)</th>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>[-0.2344276603694837,0.6231057115771055)</th>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>[0.6231057115771055,1.4806390835236947)</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>[1.4806390835236947,2.338172455470284)</th>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq_table</span><span class="p">[</span><span class="s1">&#39;Frequency&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>50</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">xarray</span><span class="p">,</span><span class="n">bins</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[28]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([ 2,  7, 14, 12,  9,  6], dtype=int64),
+ array([-2.80702778, -1.9494944 , -1.09196103, -0.23442766,  0.62310571,
+         1.48063908,  2.33817246]))</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">xarray</span><span class="p">,</span><span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(array([ 2.,  7., 14., 12.,  9.,  6.]),
+ array([-2.80702778, -1.9494944 , -1.09196103, -0.23442766,  0.62310571,
+         1.48063908,  2.33817246]),
+ &lt;a list of 6 Patch objects&gt;)</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xarray</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[32]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>array([-1.41701884, -0.83434088,  1.68122926,  1.65915274,  0.27742552,
+       -0.62210697,  0.31215801, -1.0616075 ,  0.83704793, -1.54850677,
+       -1.26570235,  2.28817246,  0.1552571 ,  1.67842064, -0.49197098,
+       -2.15913685, -0.95486952, -1.81877047, -0.11737085, -0.78179884,
+        0.28574445,  1.38912885, -0.3894516 ,  0.25213855, -1.31967793,
+       -0.84499818,  0.5862375 , -0.49273782,  0.08071446,  0.95591927,
+       -1.05473918,  1.3518673 ,  0.98555099,  2.16917499,  0.3247213 ,
+        0.09604278, -1.42946383, -1.03089234, -0.24366273, -1.38630215,
+        0.04515772,  2.23932549, -0.24188261,  0.93665945,  0.63040247,
+        0.73069146,  0.20382464,  0.70583057, -2.75702778, -1.0490838 ])</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[34]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>{&#39;whiskers&#39;: [&lt;matplotlib.lines.Line2D at 0x159fb881f28&gt;,
+  &lt;matplotlib.lines.Line2D at 0x159fb88c2b0&gt;],
+ &#39;caps&#39;: [&lt;matplotlib.lines.Line2D at 0x159fb88c5f8&gt;,
+  &lt;matplotlib.lines.Line2D at 0x159fb88c940&gt;],
+ &#39;boxes&#39;: [&lt;matplotlib.lines.Line2D at 0x159fb881ac8&gt;],
+ &#39;medians&#39;: [&lt;matplotlib.lines.Line2D at 0x159fb88cc88&gt;],
+ &#39;fliers&#39;: [&lt;matplotlib.lines.Line2D at 0x159fb88cfd0&gt;],
+ &#39;means&#39;: []}</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">xarray</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;fig1.png&#39;</span><span class="p">,</span> <span class="n">bbox_inches</span><span class="o">=</span><span class="s1">&#39;tight&#39;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">bins2</span><span class="p">,</span> <span class="n">edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">histogram</span><span class="p">(</span><span class="n">xarray</span><span class="p">,</span><span class="n">bins</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">bins2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">edges</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[ 2  7 14 12  9  6]
+[-2.80702778 -1.9494944  -1.09196103 -0.23442766  0.62310571  1.48063908
+  2.33817246]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">left</span><span class="p">,</span><span class="n">right</span> <span class="o">=</span> <span class="n">edges</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span><span class="n">edges</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+<span class="c1">#X = np.array([left,right]).T.flatten()</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">((</span><span class="n">left</span><span class="o">+</span><span class="n">right</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#Y = np.array([bins2,bins2]).T.flatten()</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bins2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[-2.37826109 -1.52072772 -0.66319435  0.19433903  1.0518724   1.90940577]
+[ 2  7 14 12  9  6]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+ 
+
